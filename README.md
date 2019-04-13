@@ -1,6 +1,7 @@
+
 # Project Charter 
 
-**Vision**: Engage people looking for entertainment and fun, in humor with jokes and content that match their interests. Help them discover jokes they might not have found otherwise and ultimately spread happiness thereby increasing user base for the app.
+**Vision**: Engage people looking for entertainment and fun, in humor with jokes and content that match their interests. Help them discover jokes they might not have found otherwise and ultimately spread happiness by sharing jokes thereby increasing user base for the app.
 
 **Mission**: Build an app for joke recommendations and drive app usage by enabling users to rank jokes on a visual analog scale. Produce updated recommendations based on their inputs(i.e. explicit preferences) using collaborative filtering(i.e. similarity to other users) recommendation model trained on Jester Dataset.
 
@@ -11,8 +12,8 @@ positive rate against false positive rate. This metric was chosen for model eval
 - Business Performance Metric : **Engagement** ~ measured by how frequently users come back to the app. Success is defined as having achieved a million plus downloads with 80% of the users visiting the app atleast once a day and is indicative of personalized recommendations that suit the sense of humor of the users.
 
 # Planning
-## Theme 1 
-         
+## Theme 1 : Joke Recommender
+Recommendation system to gauge user preferences and make personalized joke suggestions, shared widely among users
 
  - **Epic 1** : **Model Building**
 	 -	Story 1 : **Define the model objective** ~ why the model is being built and understand the end goal the model would achieve
@@ -33,10 +34,18 @@ positive rate against false positive rate. This metric was chosen for model eval
 	 - Story 2 : Write **Unit Tests** and **Configure reproducibility tests** that can be run to test each stage of model development
 	 - Story 3 : **Version Control**: Create a Github repository for potential collaboration
 	 - Story 4 : **Documentation**: Make code readable and reproducible by documenting code   	
- - **Epic 4** : **Web App development**
-	 - Story 1 : Write a web app using HTML/CSS front end to display my initial interface
-	 - Story 2 : Introduce a backend by storing it on a server to fetch the data (probably MySQL db on AWS RDS)
-	 - Story 3 : Link the RDS to the front end app by deploying on a AWS EC2 server running a Flask app
+
+## Theme 2 : Graphical User Interface
+ - **Epic 1** : **Interface Development**
+	 - Story 1 : Develop a GUI to display the story
+			 - Visual analog scale : Slider from Less Fynny to Very Funny
+			 - Search bar to search for categories of jokes
+			 - Next and back buttons to cycle between jokes.
+	 - Story 2 : Test out the interface built with users and gather feedback on the initial iteration
+	 - Story 3 : Rework the suggestions from the users into the final step of the design and convert to a web page using HTML/CSS
+- **Epic 2** : **Web App Deployment**
+	  - Story 1 : Introduce a backend by storing it on a server to fetch the data (probably MySQL db on AWS RDS)
+	 - Story 2 : Link the RDS to the front end app by deploying on a AWS EC2 server running a Flask app
 
 	
 
@@ -56,8 +65,15 @@ positive rate against false positive rate. This metric was chosen for model eval
  - Theme1.Epic3.Story2 ***Write and run tests***-   8 points
  - Theme1.Epic3.Story3 ***Version Control*** -   2 points
  - Theme1.Epic3.Story4 ***Documentation*** -   2 points
- - Theme1.Epic4.Story1 ***App development***  -  8 points
+ - Theme2.Epic1.Story1 ***Develop a GUI***  -  4 points
+ - Theme2.Epic2.Story1 - ***Fetch Data on AWS RDS***  - 4 points
+ - Theme2.Epic2.Story2 - ***Deploy App on AWS EC2***  - 4 points
 
+
+ 
 # Icebox	
 
- - Theme1.Epic4.Story2
+ - Theme2.Epic1.Story2 - ***Test out interface***  
+ - Theme2.Epic1.Story3 - ***Convert to webpage***  
+
+
