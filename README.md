@@ -1,8 +1,6 @@
 # Project Charter 
 
-**Vision**: Engage people looking for entertainment and fun, in humor with jokes and content that
-					match their interests. Help them discover jokes they might not have found otherwise
-					and ultimately spread happiness thereby increasing user base for the app.
+**Vision**: Engage people looking for entertainment and fun, in humor with jokes and content that match their interests. Help them discover jokes they might not have found otherwise and ultimately spread happiness thereby increasing user base for the app.
 
 **Mission**: Build an app for joke recommendations and drive app usage by enabling users to rank jokes on a visual analog scale. Produce updated recommendations based on their inputs(i.e. explicit preferences) using collaborative filtering(i.e. similarity to other users) recommendation model trained on Jester Dataset.
 
@@ -35,28 +33,30 @@ positive rate against false positive rate. This metric was chosen for model eval
 	 - Story 2 : Write **Unit Tests** and **Configure reproducibility tests** that can be run to test each stage of model development
 	 - Story 3 : **Version Control**: Create a Github repository for potential collaboration
 	 - Story 4 : **Documentation**: Make code readable and reproducible by documenting code   	
- - **Epic 4** : **App development**
-	 - Story 1 : Present the app and results of recommender to users with the help of Flask (deployed on AWS). (Put code in a scalable environment)
-	 - Story 2 : Update app with feedback from users
+ - **Epic 4** : **Web App development**
+	 - Story 1 : Write a web app using HTML/CSS front end to display my initial interface
+	 - Story 2 : Introduce a backend by storing it on a server to fetch the data (probably MySQL db on AWS RDS)
+	 - Story 3 : Link the RDS to the front end app by deploying on a AWS EC2 server running a Flask app
+
 	
 
 # Backlog 
 
- - Theme1.Epic1.Story1 - 2 points
+ - Theme1.Epic1.Story1 ***Define the model objective*** - 2 points    ***PLANNED***
  
- - Theme1.Epic1.Story2 -  2 points
- - Theme1.Epic1.Story3 -  4 points
- - Theme1.Epic1.Story4 -  4 points
- - Theme1.Epic1.Story5.1 - 4 points
- - Theme1.Epic1.Story5.2 - 4 points
- - Theme1.Epic2.Story1 -  2 points
- - Theme1.Epic2.Story2 -  4 points
- - Theme1.Epic2.Story3 -  1 point
- - Theme1.Epic3.Story1 -  4 points
- - Theme1.Epic3.Story2 -   8 points
- - Theme1.Epic3.Story3 -   2 points
- - Theme1.Epic3.Story4 -   2 points
- - Theme1.Epic4.Story1 -   8 points
+ - Theme1.Epic1.Story2 ***Gather the data*** -  2 points    ***PLANNED***
+ - Theme1.Epic1.Story3 ***Data Cleaning***  -  4 points  ***PLANNED***
+ - Theme1.Epic1.Story4 ***Feature Engineering*** -  4 points  ***PLANNED***
+ - Theme1.Epic1.Story5.1 ***Train Baseline Model***  - 4 points ***PLANNED***
+ - Theme1.Epic1.Story5.2 ***Train Collaborative Filtering Model*** - 4 points ***PLANNED***
+ - Theme1.Epic2.Story1 A ***Loss functions and metrics*** -  2 points
+ - Theme1.Epic2.Story2 ***Optimize model hyperparameters*** -  4 points
+ - Theme1.Epic2.Story3 ***Evaluate each model*** -  1 point
+ - Theme1.Epic3.Story1 ***Logging*** -  4 points
+ - Theme1.Epic3.Story2 ***Write and run tests***-   8 points
+ - Theme1.Epic3.Story3 ***Version Control*** -   2 points
+ - Theme1.Epic3.Story4 ***Documentation*** -   2 points
+ - Theme1.Epic4.Story1 ***App development***  -  8 points
 
 # Icebox	
 
