@@ -2,7 +2,7 @@
 import argparse
 import logging.config
 logging.config.fileConfig("config/logging/local.conf")
-logger = logging.getLogger("run-whos-the-boss")
+logger = logging.getLogger("jokerecommender")
 
 from src.downloadData import load_data
 from src.add_schema import create_sqlite_db, create_rds_db
