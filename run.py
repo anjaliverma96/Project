@@ -8,6 +8,9 @@ from src.downloadData import load_data
 from src.add_schema import create_sqlite_db, create_rds_db
 from config import BUCKET_NAME, SQLALCHEMY_DATABASE_URI, DATABASE_NAME
 
+
+
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description="Data processes")

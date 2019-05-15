@@ -3,8 +3,10 @@ import argparse
 import logging.config
 import os
 import sys
-
+import flask
 import sqlalchemy
+
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, MetaData
 
