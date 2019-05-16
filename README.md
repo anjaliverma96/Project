@@ -82,3 +82,16 @@ Recommendation system to gauge user preferences and make personalized joke sugge
 
 
 For midproject PR
+Script that acquires data from data source and puts it into S3 is available in the src folder under downloaddata.py
+
+To copy data from publicly accessible bucket "jokerecommender" to own private bucket, run:
+python run.py loadS3 --bucket=
+Script that creates database schema locally in sqlite is available in src folder under add_schema.py
+2. To create the database in the location configured in config.py, run:
+python run.py createSqlite
+
+Script that creates database schema in RDS based on a configuration is available in src folder under add_schema.py
+3. To create the database schema in AWS RDS, run:
+python run.py createRDS
+
+All variable declarations are in config.py
