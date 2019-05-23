@@ -10,7 +10,11 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, MetaData
 
+#set path to be able to access config.py
+
 sys.path.append(os.path.abspath(os.path.join('..')))
+
+#import necessary variables from config.py
 
 from config import SQLALCHEMY_DATABASE_URI, DATABASE_NAME
 
@@ -55,6 +59,8 @@ class JokeDesc(Base):
         jokedesc_repr = "<JokeDesc(joke_id='%i', joke='%s')>"
         return jokedesc_repr % (self.joke_id, self.joke)
 
+# Create table in sqlite database
+
 def create_sqlite_db(args):
     """Creates an sqlite database with the data models inherited from `Base` .
     Args:
@@ -64,11 +70,17 @@ def create_sqlite_db(args):
     """
 
     engine = sqlalchemy.create_engine(args.engine_string)
+
+    logger.info('SQLite database created')
+
     Base.metadata.create_all(engine)
 
+    logger.info('Table created in SQLite database')
+
+# Create table in RDS database
 
 def create_rds_db(args):
-    """Creates an rds table? with the data models inherited from `Base` (UserLines).
+    """Creates an rds table with the data models inherited from `Base` (UserLines).
         Args:
             args (argument from user): String defining RDS in the desrired form
         Returns:
@@ -85,6 +97,8 @@ def create_rds_db(args):
 
     engine = sqlalchemy.create_engine(engine_string)
     Base.metadata.create_all(engine)
+
+    logger.info('Table created in RDS database')
 
 
 if __name__ == '__main__':
