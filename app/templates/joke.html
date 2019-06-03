@@ -15,8 +15,6 @@
     <h3> 
         <br>
         Rate the joke on the slider below:
-        <br>
-        Funny                                 Not Funny
     </h3>
         
     
@@ -25,6 +23,12 @@
   <form method="POST" action="{{ url_for('recommend_joke') }}">
             <input class = "slider" type="range" min="-10" max="10" name="rating"
                    value = "0"/>
+      <h3> 
+        <br>
+        Rate the joke on the slider below:
+    </h3>
+      <br>
+      Not Funny :/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Funny :D
       <h3> 
         <br>
         Click on the button below for your next joke!
