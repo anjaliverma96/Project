@@ -33,7 +33,6 @@ class Jokes(db.Model):
         return jokes % (self.id, self.user_id, self.joke, self.rating)
 
 
-
 class UserRating(db.Model):
 
     """Create a data model for the database to be set up for capturing user input
@@ -83,27 +82,24 @@ def hello_world():
     #query the db to check if data is present 
     #if present then don't do anything
     #else get data from s3 boto to put into rds
-    # data = User.query.all()
-    # db.session.query()
-    # if data:
-    #     print('data is present')
-    # else:
-    #     print('data not present')
-        
-    #     # #add to db and print
-    #     a = User(username = 'asdfa',email ='asdfsa@sdfs.com')
-    #     db.session.add(a)
-    #     db.session.flush()
-    #     db.session.commit()
+
 
 
     #For direct calculation from s3
 
     #check if file is already present -
     #if not download
+
+    '''
+    Change so that data is in data folder
+    '''
     try: 
-        fr = open('ratings.csv', 'r') 
-        fj = open('jokes.csv','r')
+
+        import os
+        fj = open(os.path.join("../data", "ratings.csv"), 'r')
+        fj = open(os.path.join("../data", "jokes.csv"), 'r')
+
+
     except FileNotFoundError: 
     
         boto = Boto()
@@ -130,6 +126,10 @@ def recommend_joke():
     '''
     #write code to get the first joke and compute the matrix
     #we have loaded the data
+
+    '''
+    read from /data folder
+    '''
     data_raw = pd.read_csv('ratings.csv' ,index_col = 0)
     data_jokes = pd.read_csv('jokes.csv', index_col = 0)
     data_final = data_raw[:100000]
@@ -261,5 +261,5 @@ def add_data():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80)
+    app.run(host="127.0.0.1", port=8001)
     debug = True
